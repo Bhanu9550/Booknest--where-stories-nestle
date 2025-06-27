@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    
+    <style>
+    
+    .center-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+    width: 100%;
+}
+      
+     .centered-text {
+            text-align: center;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .centered-text h1 {
+            margin-top: 200px;
+            font-size: 2.5rem;
+            color: #ea1414;
+            
+            transition: all 0.3s ease;
+        }
+
+        /* Lines before and after the text */
+        .centered-text::before,
+        .centered-text::after,
+        .line {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 550px;
+            background: green;
+            transition: all 0.3s ease;
+        }
+
+        /* Top line */
+        .centered-text::before {
+          margin-top: 200px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Bottom line */
+        .centered-text::after {
+            bottom: 0;
+            font-weight: bold;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Hover effects */
+        .centered-text:hover h1 {
+            color: green;
+            transform: scale(1.05);
+        }
+
+        .centered-text:hover::before,
+        .centered-text:hover::after {
+            width: 300px;
+            font-weight: bold;
+            background: #e90c0c;
+        }
+
+    </style>
+   
+  </head>
+  <body style="background-image: url('./2.jpg'); background-size: cover;">
+      
+    <div id="root"></div>
+    
+    <div class="centered-screen">
+     <div class="centered-text">
+        <h1>STARTING WITH BOOKSTORE</h1>
+    </div>
+    </div>
+    
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

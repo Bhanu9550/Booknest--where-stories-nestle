@@ -1,12 +1,11 @@
-# 📚 SmartBridge Book Store
+# 📚 Book Store
 
 A full-stack MERN (MongoDB, Express, React, Node.js) book store application with user, seller, and admin dashboards.
 
-![Landing Page](media/image6.png)
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
 ### **User**
 - ✅ Register, login, and manage profile  
@@ -37,18 +36,24 @@ A full-stack MERN (MongoDB, Express, React, Node.js) book store application with
 
 ---
 
+## 📌 Future Enhancements
+- Payment Gateway: Integrate Stripe/PayPal.
+- Advanced Search: AI-based book recommendations.
+- Mobile App: React Native version.
+- Analytics Dashboard: Visualize sales trends.
+
+## 🐞 Known Issues
+- UI inconsistencies on mobile screens.
+- No email notifications for orders (future scope).
+
 ## ⚙️ Setup
 
 ### Prerequisites
 - Node.js ≥16.x  
 - MongoDB Atlas URI or local instance  
 
-### Backend Setup
+### Backend Setup & Frontend Setup
 ```bash
-# Clone repo
-git clone https://github.com/your-username/smartbridge-bookstore.git
-cd smartbridge-bookstore/server
-
 # Install dependencies
 npm install express mongoose cors jsonwebtoken dotenv
 
@@ -58,4 +63,14 @@ DB_URI=mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/bookstor
 JWT_SECRET=your_secret_key" > .env
 
 # Start server
-npm start
+npm start  
+
+# Frontend Setup
+
+cd ../client
+
+# Install dependencies
+npm install axios react-router-dom react-bootstrap
+
+# Start dev server
+npm run dev

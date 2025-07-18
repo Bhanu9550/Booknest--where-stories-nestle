@@ -1,75 +1,61 @@
-📚 Book Store
-A full-stack book store application that enables users to browse, purchase, and manage books, with dedicated dashboards for sellers and admins. Built with React, Node.js, Express, and MongoDB.
-🚀 Key Features
-User Features
-Registration & Authentication: Secure sign-up/login for users.
+# 📚 SmartBridge Book Store
 
-Book Browsing: Filter by genre, author, ratings, and availability.
+A full-stack MERN (MongoDB, Express, React, Node.js) book store application with user, seller, and admin dashboards.
 
-Purchase Flow: Add to cart, checkout, and order confirmation.
+![Landing Page](media/image6.png)
 
-Order History: Track past/current orders and leave reviews.
+---
 
-Wishlist: Save favorite books for later.
+## 🚀 Features
 
-Seller Features
-Book Management: Add, update, or remove book listings.
+### **User**
+- ✅ Register, login, and manage profile  
+- 🔍 Browse books by genre/author  
+- 🛒 Add to cart & checkout  
+- 📖 Track orders/wishlists  
+- ⭐ Leave reviews  
 
-Inventory Control: Track stock levels and conditions.
+### **Seller**
+- 📝 Add/edit book listings  
+- 📦 Manage inventory (quantity/condition)  
+- 🚚 Process orders  
 
-Order Fulfillment: Process and ship user orders.
+### **Admin**  
+- 👥 Manage users/sellers  
+- 📊 Sales analytics  
+- 🛠️ Platform oversight  
 
-Admin Features
-User/Seller Management: Approve accounts, update profiles, and handle ratings.
+---
 
-System Oversight: Manage books, inventory, and analytics.
+## 🛠️ Tech Stack
 
-Reporting: Sales, genre popularity, and user demographics.
+| Frontend          | Backend         | Database   | Tools            |
+|-------------------|-----------------|------------|------------------|
+| React.js          | Node.js         | MongoDB    | Axios (API calls)|
+| React Router      | Express.js      | Mongoose   | Bootstrap        |
+| Context API       | JWT Auth        |            | Vite             |
 
-🛠️ Tech Stack
-Frontend: React.js, Axios, React-Router, Bootstrap
+---
 
-Backend: Node.js, Express.js, Mongoose (MongoDB ODM)
+## ⚙️ Setup
 
-Database: MongoDB
+### Prerequisites
+- Node.js ≥16.x  
+- MongoDB Atlas URI or local instance  
 
-Authentication: JWT (implied from routes)
-
-Deployment: (Not specified – suggest Netlify/Vercel for frontend, Heroku/Render for backend)
-
-⚙️ Installation & Setup
-Prerequisites
-Node.js & npm: Download Here
-
-MongoDB: Installation Guide
-
-Steps
-Clone the repository:
-
-bash
+### Backend Setup
+```bash
+# Clone repo
 git clone https://github.com/your-username/smartbridge-bookstore.git
-cd smartbridge-bookstore
-Backend Setup:
+cd smartbridge-bookstore/server
 
-bash
-cd server
-npm install express mongoose cors
-# Create a `.env` file with:
-# PORT=5000
-# DB_URI=your_mongodb_uri
+# Install dependencies
+npm install express mongoose cors jsonwebtoken dotenv
+
+# Create .env file
+echo "PORT=5000
+DB_URI=mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/bookstore
+JWT_SECRET=your_secret_key" > .env
+
+# Start server
 npm start
-Frontend Setup:
-
-bash
-cd client
-npm install axios react-router-dom bootstrap
-npm run dev
-
-📌 Future Enhancements
-Payment Gateway: Integrate Stripe/PayPal.
-
-Advanced Search: AI-based book recommendations.
-
-Mobile App: React Native version.
-
-Analytics Dashboard: Visualize sales trends.
